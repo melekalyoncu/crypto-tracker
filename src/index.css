@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Yumuşak geçişler ve seçim rengi */
+html, body, #root { height: 100%; }
+* { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(99,102,241,.25); }
+
+/* Tema ve arkaplan */
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+
+/* Light */
+html:not(.dark) body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #eef2ff 10%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 0%, #fdf2f8 8%, transparent 50%),
+    #ffffff;
+  color: #111827;
+}
+
+/* Dark */
+html.dark body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #0f172a 15%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 0%, #1e293b 10%, transparent 50%),
+    #0b1220;
+  color: #e5e7eb;
+}
+
+/* Renk geçişleri akıcı olsun */
+body { transition: background-color .2s ease, color .2s ease; }

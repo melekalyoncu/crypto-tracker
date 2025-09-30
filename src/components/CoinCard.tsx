@@ -18,7 +18,7 @@ export default function CoinCard({ c }: { c: CoinMarket }) {
         </div>
         <button
           onClick={() => dispatch(toggleFavorite(c.id))}
-          className={`rounded-full px-3 py-1 text-xs border ${isFav ? 'border-yellow-400 text-yellow-300' : 'border-white/10 text-white/70'}`}
+          className={`rounded-full px-3 py-1 text-xs border ${isFav ? 'border-yellow-400 text-yellow-300' : 'border-b-gray-700 text-gray-700'}`}
         >{isFav ? 'Favori ✓' : 'Favorilere ekle'}</button>
       </div>
       <div className="mt-3 flex items-center justify-between">

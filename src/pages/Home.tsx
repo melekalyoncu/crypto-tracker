@@ -28,10 +28,21 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
                 {list?.map(c => <CoinCard key={c.id} c={c} />)}
             </div>
-            <div className="mt-6 flex items-center justify-center gap-2">
-                <button onClick={() => setPage(p => Math.max(1, p - 1))} className="rounded-xl border border-white/10 px-3 py-2 text-sm disabled:opacity-50" disabled={page === 1}>Önceki</button>
+            <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center gap-2 border-t border-white/10 bg-black/80 py-3 backdrop-blur">
+                <button
+                    onClick={() => setPage(p => Math.max(1, p - 1))}
+                    className="rounded-xl border border-white/10 px-3 py-2 text-sm disabled:opacity-50"
+                    disabled={page === 1}
+                >
+                    Önceki
+                </button>
                 <span className="text-sm opacity-70">Sayfa {page}</span>
-                <button onClick={() => setPage(p => p + 1)} className="rounded-xl border border-white/10 px-3 py-2 text-sm">Sonraki</button>
+                <button
+                    onClick={() => setPage(p => p + 1)}
+                    className="rounded-xl border border-white/10 px-3 py-2 text-sm"
+                >
+                    Sonraki
+                </button>
             </div>
         </div>
     )
